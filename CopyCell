@@ -1,0 +1,27 @@
+function myFunction() {
+  var ss = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Sheet6");
+  var rng = ss.getRange("B2:D2");
+
+  rng.setBackground('green');
+  rng.setFontWeight('bold');
+  rng.setBorder(true,true,true,true,true,true);
+}
+
+function SingleCellCopy(){
+  var ss = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Sheet6");
+  var sRng = ss.getRange(4,3).getValue();
+  Logger.log(sRng); //see what is actually stored in that var 
+  //now we need to select the function we want to run
+  ss.getRange(4,5).setValue(sRng);
+
+}
+
+function MultiCellCopy(){
+    var ss = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Sheet6");
+    var sRng2 = ss.getRange(1,1,7,3).getValues();
+    var ss2 = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Play GroundSheet");
+    ss2.getRange(1,1,7,3).setValues(sRng2)
+
+
+
+}
