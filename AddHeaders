@@ -1,0 +1,9 @@
+function AddHeaders() {
+  var ss= SpreadsheetApp.getActiveSpreadsheet();
+  var rng = ss.getActiveSheet().getRange("A1:D1");
+  var headers = [["Date","loan #","Amount","Term"]];
+
+  rng.setValues(headers)
+   
+  
+}
