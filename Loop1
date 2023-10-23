@@ -1,0 +1,19 @@
+function Loop3() {
+  var ss = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+  var EndRow = ss.getLastRow();
+
+  for(var i=2 ; i<= EndRow; i++){
+    var Cost = ss.getRange(i,4).getValue();
+    var ship1 = 10.00;
+    var ship2 = 5.00;
+
+    if(ss.getRange(i,1).getValue()=="Branch 2"){
+      ss.getRange(i,5).setValue(ship1);
+      ss.getRange(i,6).setValue(ship1 + Cost);
+    }else{
+      ss.getRange(i,5).setValue(ship2);
+      ss.getRange(i,6).setValue(ship2 + Cost);
+    }
+  }
+  
+}
