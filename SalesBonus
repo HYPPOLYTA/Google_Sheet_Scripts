@@ -1,0 +1,13 @@
+/**
+ * Calculates Sales Bonuse
+ * @customfuncttion
+ */
+
+function SalesBonus(SalesAmount) {
+  if(SalesAmount >= 12000) {
+    return SalesAmount* .25;
+  } else if(SalesAmount >=10000) {
+    return SalesAmount* .15;
+  } else{
+    return 0;
+  }
